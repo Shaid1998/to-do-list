@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/demo-url','\App\Http\Controllers\DemoController@test');
+Route::get('/to-do-list','\App\Http\Controllers\ListController@index');
+Route::get('/create','\App\Http\Controllers\ListController@create');
+Route::get('/edit','\App\Http\Controllers\ListController@edit');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
